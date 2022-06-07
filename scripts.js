@@ -28,4 +28,10 @@ window.addEventListener('load', function(){
             document.getElementById("spaceShuttleHeight").innerHTML = "0";
         }
     })
+    moveRight = document.getElementById("right");
+    moveRight.addEventListener('click', function(){
+        rocket = document.getElementById("rocket");
+        
+
+    })
 })
