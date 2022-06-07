@@ -5,8 +5,18 @@ window.addEventListener('load', function(){
         if (takeOffConfirmation === true) {
             document.getElementById("flightStatus").innerHTML = "Shuttle in flight";
             document.getElementById("shuttleBackground").style.backgroundColor = "blue";
-            document.getElementById("spaceShuttleHeight").innerHTML = 10000;
-
+            let height = document.getElementById("spaceShuttleHeight").innerHTML;
+            height = Number(height);
+            height += 10000;
+            height = String(height);
+            document.getElementById("spaceShuttleHeight").innerHTML = height;
         }
+    })
+    land = document.getElementById("landing");
+    land.addEventListener('click', function(){
+        window.alert("The shuttle is landing. Landing gear engaged");
+        document.getElementById("flightStatus").innerHTML = "The shuttle has landed";
+        document.getElementById("shuttleBackground").style.backgroundColor = "green";
+        document.getElementById("spaceShuttleHeight").innerHTML = "0";
     })
 })
